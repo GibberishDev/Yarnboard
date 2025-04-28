@@ -3,12 +3,19 @@
     <title>Yarnboard</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="icon" href="../../assets/svg/icon.svg">
+    <link rel="import" href="project_scene.html">
     <script defer src="../js/app_titlebar_controls.js"></script>
+    <script defer>
+        function exchange() {
+            document.body.innerHTML = 
+            document.getElementsByTagNam('main-body')
+        }
+    </script>
 </head>
 <body>
     <title-bar>
         <div id="app-icon"><img src="../../assets/svg/icon.svg" alt="icon"></div>
-        <div id="title-bar-label">Yarnboard</div>
+        <div id="title-bar-label">Yarnboard - Blue Prince - Board 1</div>
         <div id="title-bar-controls">
             <div title="Miminize window" id="button-minimize" class="title-bar-button"><img src="../../assets/svg/minimize.svg" alt=""></div>
             <div title="Maximize window" id="button-maximize" class="title-bar-button"><img src="../../assets/svg/maximize.svg" alt=""></div>
@@ -20,8 +27,13 @@
         <link rel="stylesheet" href="../css/project_list.css">
         <project-list>
             <div id="splash-art"><img src="../../assets/png/test_splash_art.png" alt=""></div>
-            <div id="project-control"></div>
-            <div id="recents"></div>
+            <div id="project-control">
+                <div class="project-control-button">New project</div>
+                <div class="project-control-button">Open project</div>
+                <button class="project-control-button" onclick="exchange()">New project</button>
+                <!-- <div class="project-control-button">About</div>
+                <div class="project-control-button">Setings</div> -->
+            </div>
         </project-list>
     </main-body>
 </body>

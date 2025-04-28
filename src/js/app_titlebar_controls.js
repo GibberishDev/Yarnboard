@@ -25,3 +25,13 @@ ipcRenderer.on('changeMaximizeIcon', (_event, state) => {
         maximizeButton.title = 'Maximize window'
     }
 })
+
+function request() {
+    console.log('signal sent')
+    ipc.send('image-get')
+}
+
+ipcRenderer.on('image-set', (_event, image) => {
+    console.log('file://' + image)
+    document.getElementById('imgae').src = 'file://' + image
+})

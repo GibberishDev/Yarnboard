@@ -1,12 +1,10 @@
 @import url(variables.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-
-
 * {
+    font-family: 'space grotesk';
     margin: 0;
     user-select: none;
-    /* font-family: "space grotesk"; */
+    color: var(--var-color-content-base1)
 }
 
 img {
@@ -35,12 +33,14 @@ title-bar {
 }
 
 #app-icon {
-    width: 26px;
+    flex-grow: 2;
+    height: 26px;
     padding-left: 8px;
 }
 #app-icon img {
     width: 100%;
     padding-top: 2px;
+    width: 26px;
 }
 
 #title-bar-label {
@@ -49,6 +49,8 @@ title-bar {
     flex-grow: 1;
     text-align: center;
     line-height: 30px;
+    position: absolute;
+    width: 100%;
 }
 
 #title-bar-controls {
@@ -70,6 +72,7 @@ title-bar {
     background: var(--var-color-background-base03);
     cursor: pointer;
     transition-duration: 150ms;
+    z-index: 2;
 }
 
 #button-close:hover {
@@ -88,6 +91,7 @@ main-body {
     flex-direction: column;
     align-items: center;
     overflow: scroll;
+    scrollbar-width: none;
 }
 
 main-body::-webkit-scrollbar {

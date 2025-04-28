@@ -1,0 +1,61 @@
+@import url(../variables.css);
+
+:root {
+    --var-element-width: 400px;
+    --var-element-height: calc(var(--var-element-width) * 1.2);
+    --var-note-background: rgb(255, 255, 208);
+}
+
+.element-background {
+    outline: solid 0 #FFA028;
+    outline-offset: 5px;
+    height: var(--var-element-height);
+    width: var(--var-element-width);
+    background: var(--var-note-background);
+    background-size: 100% 200%;
+    background-position: 0 100%;
+    background-image: linear-gradient(#00000000, #00000000, #00000030);
+    box-shadow: 0px 16px 5px rgba(0,0,0,.5);
+    transform: scaleY(.95);
+    transform-origin: 50% 5%;
+    transition-duration: 250ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.element-background:hover {
+    background-position: 0 0%;
+    box-shadow: 0px 4px 2px rgba(0,0,0,.5);
+    transform: scale(1);
+}
+
+.photo-container {
+    background: black;
+    width: 80%;
+    aspect-ratio: 1;
+    margin-top: 10%;
+}
+
+.photo-label {
+    line-height: 100%;
+    margin-bottom: 10%;
+    overflow: hidden;
+    max-width: 80%;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+    font-family: 'Covered By Your Grace';
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.photo-element{
+    position: absolute;
+    width: fit-content;
+}
+.selected {
+    outline: solid var(--var-outline-width) #FFA028;
+    border-radius: 5px;
+}

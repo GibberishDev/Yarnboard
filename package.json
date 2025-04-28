@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "electron": "^35.2.1"
+  },
+  "dependencies": {
+    "@electron-toolkit/utils": "^4.0.0"
   }
 }

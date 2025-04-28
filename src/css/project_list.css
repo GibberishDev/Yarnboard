@@ -7,7 +7,7 @@ project-list {
     flex-grow: 2;
     display: grid;
     grid-template-rows: clamp(50%, 270px, 540px) auto;
-    grid-template-columns: 40% auto;
+    grid-template-columns: min-content auto;
     border-radius: 0;
     transition-duration: 150ms;
     overflow: hidden;
@@ -35,11 +35,29 @@ project-list {
 #project-control {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    background: var(--var-color-background-base02);
+    background: var(--var-color-background-base03);
+    border-right: 1px solid var(--var-color-background-base02);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 #recents {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     background: var(--var-color-background-base03);
+}
+
+.project-control-button {
+    font-size: 24px;
+    user-select: none;
+    cursor: pointer;
+    transition-duration: 150ms;
+    min-width: 256px;
+    padding-right: .25em;
+}
+.project-control-button:hover {
+    color: var(--var-color-background-base2);
+    padding-left: .25em;
+    padding-right: 0;
 }
