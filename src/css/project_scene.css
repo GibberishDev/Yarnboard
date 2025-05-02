@@ -2,8 +2,14 @@
 
 body {
     margin: 0;
+    overflow: hidden;
+}
+
+#project-scene-body {
+    margin: 0;
     background: var(--var-color-background-base02);
     height: 100dvh;
+    position: relative;
 }
 
 .board {
@@ -61,4 +67,78 @@ body {
 
 #board-elements {
     position: absolute;
+}
+
+#loading-splash-container {
+    user-select: none;
+    background: rgba(100%,0%,0%,10%);
+    position: absolute;
+    pointer-events: none;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading-splash {
+    background: var(--var-color-background-base04);
+    border: var(--var-color-background-base03) 2px solid;
+    border-radius: 12px;
+    font-family: var(--var-font-regular);
+    padding: 12px;
+    display: grid;
+    grid-template-rows: 24px 20px 20px;
+    row-gap: 8px;
+    grid-template-columns: auto 36px;
+}
+
+#loading-label {
+    font-size: 24px;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    color: var(--var-color-content-base1);
+}
+
+#loading-text {
+    font-size: 20px;
+    grid-row: 2/3;
+    grid-column: 1/3;
+    color: var(--var-color-content-base00);
+}
+
+#loading-progress {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    width: 100%;
+    height: 8px;
+    margin-top: 8px;
+    background-size: 200% 100%;
+    background-position: -50% 0;
+    background-image: linear-gradient(-90deg, var(--var-color-content-base1), var(--var-color-content-base1) 50%, var(--var-color-content-base00) 50.1%, var(--var-color-content-base00));
+}
+
+#loading-spinner {
+    width: 20px;
+    margin-left: 8px;
+    border-radius: 100%;
+    border: 2px var(--var-color-content-base1) dashed;
+    box-sizing: border-box;
+    animation: spinner 2s linear 0s infinite forwards;
+}
+
+@keyframes spinner {
+    0% {
+        rotate: 0deg;
+    }
+    50% {
+        rotate: 180deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+    
 }

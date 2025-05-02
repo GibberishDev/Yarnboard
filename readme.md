@@ -1,3 +1,3 @@
 # Yarnboard
 
-Lightweigth app to visualize connections between elements. 
+Lightweight app to visualize connections between elements. 

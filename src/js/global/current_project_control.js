@@ -18,6 +18,8 @@ function scaleOutline() {
 const bg = document.getElementById('board-background')
 
 document.addEventListener('wheel', (ev) => {
+    if (document.getElementById('loading-splash-container').style.display !== "none") {return}
+    if (document.getElementById(''))
     mouseOffsetX = ev.clientX
     mouseOffsetY = ev.clientY
     if (ev.deltaY > 0 ) {
@@ -30,6 +32,7 @@ document.addEventListener('wheel', (ev) => {
 })
 
 document.addEventListener('mousedown', (ev) => {
+    if (document.getElementById('loading-splash-container').style.display !== "none") {return}
     if (ev.button === 1) {
         ev.preventDefault();
     }
@@ -39,6 +42,7 @@ var mouseOffsetX
 var mouseOffsetY
 
 document.addEventListener('mousemove', (ev) => {
+    if (document.getElementById('loading-splash-container').style.display !== "none") {return}
     mouseOffsetX = ev.clientX
     mouseOffsetY = ev.clientY
     if (bg.style.backgroundPositionX === '') {bg.style.backgroundPositionX = '0'}

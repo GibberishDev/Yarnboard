@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<style>
+
+    #div1 {
+        background: red;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 250px;
+        top: 360px;
+        border-radius: 5px;
+
+    }
+
+    #div2 {
+        background: blue;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 650px;
+        top: 260px;
+
+        border-radius: 5px;
+    }
+
+    #line {
+        position: absolute;
+        background: white;
+        height: 16px;
+        border-radius: 8px;
+    }
+</style>
+
 </head>
-<body>
-    
+<body style="background: black;">
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="line"></div>
 </body>
+
+<script defer>
+    function getPoints(elid1, elid2) {
+        var el1 = document.getElementById(elid1)
+        var el2 = document.getElementById(elid2)
+        var point1x = el1.offsetLeft + (el1.clientWidth / 2.0)
+        var point1y = el1.offsetTop + (el1.clientHeight / 10.0)
+        var point2x = el2.offsetLeft + (el1.clientWidth / 2.0)
+        var point2y = el2.offsetTop + (el1.clientHeight / 10.0)
+        var points = {
+            pointStart : {
+                x: point1x,
+                y: point1y
+            },
+            pointEnd: {
+                x: point2x,
+                y: point2y
+            }
+        }
+        return(points)
+    }
+
+    function pointsGetDistance(points) {
+        var point1 = points.pointStart
+        var point2 = points.pointEnd
+        var distX = point2.x - point1.x
+        var distY = point2.y - point1.y
+        var dist = Math.sqrt((distX * distX) + (distY * distY))
+        return(dist)
+    }
+
+    function pointsGetAngle(points) {
+        var dist = pointsGetDistance(points)
+        var distX = points.pointEnd.x - points.pointStart.x
+        var distY = points.pointEnd.y - points.pointStart.y
+        var sinAng = distY / dist
+        var ang = Math.asin(sinAng)
+        if (distX < 0) {ang = Math.PI - ang}
+        console.log(ang)
+        return ang
+    }
+
+    function createLine(points) {
+        var dist = pointsGetDistance(points)
+        var angle = pointsGetAngle(points)
+        let line = document.getElementById("line")
+        line.style.left = String(points.pointStart.x - 8) + "px"
+        line.style.top = String(points.pointStart.y - 8) + "px"
+        line.style.width = String(dist + 16) + "px"
+        line.style.transformOrigin = "8px 8px"
+        line.style.transform = "rotate(" + String(angle) + "rad)"
+    }
+
+    createLine(getPoints('div1', 'div2')) 
+
+    var el2 = document.getElementById('div2')
+
+    document.addEventListener('mousemove', (ev => {
+        el2.style.left = String(ev.clientX - 50) + "px"
+        el2.style.top = String(ev.clientY - 10) + "px"
+        createLine(getPoints('div1', 'div2'))
+    }))
+</script>
 </html>
