@@ -41,3 +41,9 @@ MODULE.write_json_file = (path, object) => {
     WRITE_FILE(path, JSON.stringify(object))
 }
 
+MODULE.writeImageFromBase64 = (path, base64) => {
+    const base64Data = base64.replace(/^data:image\/png;base64,/, "");
+    WRITE_FILE(path, base64Data, 'base64', function (err) {
+        console.log(err);
+    });
+}

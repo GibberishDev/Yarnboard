@@ -1,16 +1,12 @@
 @import url(../variables.css);
 
 :root {
-    --var-element-width: 400px;
-    --var-element-height: calc(var(--var-element-width) * 1.2);
     --var-note-background: rgb(255, 255, 208);
 }
 
 .element-background {
     outline: solid 0 #FFA028;
     outline-offset: 5px;
-    height: var(--var-element-height);
-    width: var(--var-element-width);
     background: var(--var-note-background);
     background-size: 100% 200%;
     background-position: 0 100%;
@@ -23,6 +19,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .element-background:hover {
@@ -33,25 +30,20 @@
 
 .photo-container {
     background: black;
-    width: 80%;
-    aspect-ratio: 1;
-    margin-top: 10%;
 }
 
 .photo-label {
     line-height: 100%;
     margin-bottom: 10%;
-    overflow: hidden;
-    max-width: 80%;
     text-align: center;
     text-decoration: underline;
     font-size: 2rem;
-    font-family: 'Covered By Your Grace';
+    font-family: var(--var-font-handwritten);
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.photo-element{
+.photo-element {
     position: absolute;
     width: fit-content;
 }

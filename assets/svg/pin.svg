@@ -2,133 +2,155 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="127.99999"
-   height="127.99999"
-   viewBox="0 0 33.866664 33.866664"
+   width="128"
+   height="128"
+   viewBox="0 0 34 34"
    version="1.1"
    id="svg1"
+   sodipodi:docname="pin.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="6.6796875"
+     inkscape:cx="63.925146"
+     inkscape:cy="64"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
   <defs
      id="defs1">
     <linearGradient
        id="linearGradient17">
       <stop
-         style="stop-color:#8c8c8c;stop-opacity:1;"
+         style="stop-color:#e2e2e2;stop-opacity:1;"
          offset="0"
          id="stop18" />
       <stop
-         style="stop-color:#414141;stop-opacity:1;"
+         style="stop-color:#282828;stop-opacity:1;"
          offset="0.5"
          id="stop19" />
       <stop
-         style="stop-color:#8c8c8c;stop-opacity:1;"
+         style="stop-color:#c3c3c3;stop-opacity:1;"
          offset="1"
          id="stop20" />
     </linearGradient>
     <linearGradient
        id="linearGradient15">
       <stop
-         style="stop-color:#9c9c9c;stop-opacity:1;"
+         style="stop-color:#890000;stop-opacity:1;"
          offset="0"
          id="stop15" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:#ff0000;stop-opacity:1;"
          offset="1"
          id="stop16" />
     </linearGradient>
     <linearGradient
        id="linearGradient12">
       <stop
-         style="stop-color:#959595;stop-opacity:1;"
+         style="stop-color:#4e0000;stop-opacity:1;"
          offset="0"
          id="stop13" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:#ff0000;stop-opacity:1;"
          offset="1"
          id="stop14" />
     </linearGradient>
     <linearGradient
        id="linearGradient10">
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:#ff0000;stop-opacity:1;"
          offset="0"
          id="stop10" />
       <stop
-         style="stop-color:#a9a9a9;stop-opacity:1;"
-         offset="0.41999999"
+         style="stop-color:#8f0000;stop-opacity:1;"
+         offset="0.40000001"
          id="stop11" />
       <stop
-         style="stop-color:#a8a8a8;stop-opacity:1;"
-         offset="0.57999998"
+         style="stop-color:#8e0000;stop-opacity:1;"
+         offset="0.60000002"
          id="stop17" />
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:#ff0000;stop-opacity:1;"
          offset="1"
          id="stop12" />
     </linearGradient>
     <linearGradient
        xlink:href="#linearGradient10"
        id="linearGradient11"
-       x1="11.641667"
-       y1="15.289896"
-       x2="22.225"
-       y2="15.289896"
+       x1="12"
+       y1="16"
+       x2="22"
+       y2="16"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1,0,0,0.99300207,0,-4.070398)" />
+       gradientTransform="matrix(1,0,0,1,0,-4)" />
     <radialGradient
        xlink:href="#linearGradient12"
        id="radialGradient14"
-       cx="16.886564"
-       cy="29.544912"
-       fx="16.886564"
-       fy="29.544912"
-       r="12.7"
-       gradientTransform="matrix(1.4602396,-0.00702446,0.00270077,0.74375877,-8.1082274,-0.33408643)"
+       cx="16"
+       cy="30"
+       fx="16"
+       fy="30"
+       r="12.5"
+       gradientTransform="matrix(1.5,0,0,0.75,-8,0)"
        gradientUnits="userSpaceOnUse" />
     <radialGradient
        xlink:href="#linearGradient15"
        id="radialGradient16"
-       cx="16.980104"
-       cy="11.056562"
-       fx="16.980104"
-       fy="11.056562"
-       r="6.3499999"
-       gradientTransform="matrix(1.6357225,0.01532609,-0.00840791,0.93394962,-10.700747,-4.4554245)"
+       cx="16"
+       cy="10"
+       fx="16"
+       fy="10"
+       r="6"
+       gradientTransform="matrix(1.65,0,0,1,-10,-4)"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        xlink:href="#linearGradient17"
        id="linearGradient19"
-       x1="14.816667"
-       y1="25.929167"
-       x2="19.049999"
-       y2="25.929167"
+       x1="16"
+       y1="26"
+       x2="20"
+       y2="26"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <g
      id="layer1">
     <path
        style="fill:url(#linearGradient19);stroke:none;stroke-width:0.0649999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       d="M 16.933333,33.866667 19.05,17.991667 h -4.233333 z"
+       d="M 17,33 19,18 h -4 z"
        id="path17" />
     <ellipse
        style="fill:url(#radialGradient14);stroke:none;stroke-width:0.438059;stroke-linecap:round;stroke-linejoin:round"
        id="path1"
-       cx="16.668751"
-       cy="17.4625"
-       rx="10.31875"
-       ry="5.8208332" />
+       cx="17"
+       cy="17"
+       rx="10"
+       ry="6" />
     <path
        style="fill:url(#linearGradient11);fill-opacity:1;stroke:none;stroke-width:0.0647721;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       d="M 11.641667,16.948146 13.704245,3.175 20.205576,3.2214447 22.225,16.948146 c 0,0 -1.633206,2.101854 -5.291667,2.101854 -3.658461,0 -5.291666,-2.101854 -5.291666,-2.101854 z"
+       d="M 12,16 14,3 20,3 22,16  c 0,0 -1.5, 2  -5, 2 -3.5,0 -5,-2 -5,-2 z"
        id="path2" />
     <ellipse
        style="fill:url(#radialGradient16);stroke:none;stroke-width:0.253796;stroke-linecap:round;stroke-linejoin:round"
        id="path1-8"
-       cx="16.933332"
-       cy="4.2333331"
-       ry="3.175"
-       rx="6.3499999" />
+       cx="17"
+       cy="4"
+       ry="3"
+       rx="6" />
   </g>
 </svg>

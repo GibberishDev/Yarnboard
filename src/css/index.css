@@ -1,7 +1,7 @@
 @import url(variables.css);
 
 * {
-    font-family: 'space grotesk';
+    font-family: var(--var-font-regular);
     margin: 0;
     user-select: none;
     color: var(--var-color-content-base1)
@@ -44,7 +44,7 @@ title-bar {
 }
 
 #title-bar-label {
-    font-family: "space grotesk";
+    font-family:  var(--var-font-regular);
     font-size: 16px;
     flex-grow: 1;
     text-align: center;

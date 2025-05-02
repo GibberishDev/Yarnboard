@@ -4,7 +4,6 @@ var viewOffsetY = 0.0
 var viewZoomLevel = 1.0
 
 var elements = Array.prototype.slice.call(document.getElementsByClassName('element'))
-console.log(elements)
 elements.forEach(element => {
     element.addEventListener('click', (ev) => {
         console.log(element.children[0].classList.toggle('selected'))
@@ -14,24 +13,6 @@ elements.forEach(element => {
 
 function scaleOutline() {
     document.querySelector(':root').style.setProperty('--var-outline-width', String(5 / viewZoomLevel) + "px")
-}
-
-
-var project_path = ''
-var project_manifest = {
-    label: "Test",
-    author: "GibbDev"
-}
-var boards = {
-    'board 1' : {
-        elements: {
-            photo_elements  : [],
-            picture_elements: [],
-            label_elements  : [],
-            canvas_elements : [],
-            text_elements   : [],
-        }
-    }
 }
 
 const bg = document.getElementById('board-background')
@@ -115,22 +96,3 @@ function updateZoom(new_zoom) {
     bg.style.backgroundPositionY = String(viewOffsetY) + "px"
     bg.style.backgroundSize = (String(new_zoom) + 'px')
 }
-
-
-
-
-const {ipcRenderer} = require('electron')
-const ipc = ipcRenderer
-
-function setProjectPath() {
-    ipc.send('get-project-path')
-}
-
-function writeManifest() {
-    ipc.send('write-json-to-path', String(project_path) + '/mainfest.json', project_manifest)
-}
-
-ipcRenderer.on('set-project-path', (_event, path) => {
-    console.log(path)
-    project_path = path
-})

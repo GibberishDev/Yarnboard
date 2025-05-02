@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
 
 :root {
-    --var-color-background-base034: #00141a;
+    --var-color-background-base04: #00212b;
     --var-color-background-base03: #002b36;
-    --var-color-background-base02: #073642;
+    --var-color-background-base02: #004052;
     --var-color-background-base2: #eee8d5;
     --var-color-background-base3: #fdf6e3;
     --var-color-content-base01: #586e75;
@@ -15,4 +15,6 @@
     --var-color-close: #e81123;
     --var-outline-width: 5px;
 
+    --var-font-regular: "space grotesk";
+    --var-font-handwritten: "Covered By Your Grace";
 }

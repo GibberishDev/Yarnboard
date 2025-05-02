@@ -3,14 +3,7 @@
     <title>Yarnboard</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="icon" href="../../assets/svg/icon.svg">
-    <link rel="import" href="project_scene.html">
     <script defer src="../js/app_titlebar_controls.js"></script>
-    <script defer>
-        function exchange() {
-            document.body.innerHTML = 
-            document.getElementsByTagNam('main-body')
-        }
-    </script>
 </head>
 <body>
     <title-bar>
@@ -22,7 +15,6 @@
             <div title="Close window" id="button-close" class="title-bar-button"><img src="../../assets/svg/close.svg" alt=""></div>
         </div>
     </title-bar>
-    <tab-bar></tab-bar>
     <main-body>
         <link rel="stylesheet" href="../css/project_list.css">
         <project-list>
@@ -34,7 +26,11 @@
                 <!-- <div class="project-control-button">About</div>
                 <div class="project-control-button">Setings</div> -->
             </div>
+            <div id="recents">
+                <image id="test"></image>
+            </div>
         </project-list>
     </main-body>
+    
 </body>
 </html>
