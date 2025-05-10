@@ -9,7 +9,7 @@ const WRITE_FILE = PROMISIFY(FS.writeFile)
 
 
 const HOME_DIR = OS.homedir()
-const LOCAL_DIR = PATH.join(HOME_DIR, 'AppData/Local/yarnboard')
+const LOCAL_DIR = PATH.join(HOME_DIR, '/yarnboard')
 
 function getAppFolder() {
     if (!FS.existsSync(LOCAL_DIR)) {
