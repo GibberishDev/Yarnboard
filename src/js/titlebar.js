@@ -19,6 +19,7 @@ document.querySelector("#button-close").addEventListener("click", () => {
 document.querySelector("#title-bar-icon-button").addEventListener("click", () => {
     alert("Icon button")
 })
+
 document.querySelector("#title-bar-menu-button").addEventListener("click", () => {
     alert("Menu button")
 })
