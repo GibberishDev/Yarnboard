@@ -1,0 +1,58 @@
+@import url(variables.css);
+
+#project-tree-container {
+    border: 2px solid var(--var-color-theme-dark);
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 400px;
+    height: 100%;
+    transition-property: border-radius, width, opacity;
+    transition-duration: 150ms;
+    padding: 4px;
+    background: var(--var-color-theme-darkest);
+    font-family: var(--var-font-regular);
+    color: var(--var-color-theme-darkless);
+    opacity: 100%;
+}
+#project-tree-container:hover {
+    border-color: var(--var-color-theme-accent);
+    color: var(--var-color-theme-accent);
+}
+#project-tree-container.tree-hidden {
+    width: 16px;
+    height: 32px;
+    position: absolute;
+    left: 6px;
+    padding: 0;
+}
+#project-tree-container.tree-hidden.hidden {
+    opacity: 0;
+}
+
+
+#project-tree-button-unfold svg {
+    height: 28px;
+    width: 12px;
+    stroke: var(--var-color-theme-dark);
+    display: block;
+}
+#project-tree-container:not(.tree-hidden) #project-tree-button-unfold svg {
+    display: none;
+}
+#project-tree-container:hover #project-tree-button-unfold svg{
+    stroke: var(--var-color-theme-accent);
+    border-color: var(--var-color-theme-accent);
+    color: var(--var-color-theme-accent);
+}
+
+#project-tree-resizer {
+    background: var(--var-color-theme-darkest);
+    min-width: 4px;
+    height: 100%;
+    cursor: e-resize;
+    transition-duration: 150ms;
+}
+
+#project-tree-resizer:hover {
+    background: var(--var-color-theme-accent);
+}

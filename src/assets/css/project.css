@@ -1,0 +1,22 @@
+@import url(variables.css);
+
+#current-project {
+    border: 2px solid var(--var-color-theme-dark);
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    transition-duration: 150ms;
+    padding: 4px;
+}
+
+#current-project:hover {
+    border-color: var(--var-color-theme-accent);
+}
+
+#project-background {
+    background-image: url(../svg/pattern.svg);
+    background-position: 50%;
+    width: 100%;
+    height: 100%;
+}
