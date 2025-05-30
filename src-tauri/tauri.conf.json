@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "yarnboard",
+  "version": "0.1.0",
+  "identifier": "gibbdev.yarnboard",
+  "build": {
+    "frontendDist": "../src",
+    "removeUnusedCommands": true
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "yarnboard",
+        "width": 960,
+        "height": 540,
+        "decorations": false,
+        "minHeight": 432,
+        "minWidth": 768
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon32x.png",
+      "icons/icon64x.png",
+      "icons/icon128x.png",
+      "icons/icon256x.png",
+      "icons/icon512x.png",
+      "icons/icon.ico"
+    ]
+  }
+}
