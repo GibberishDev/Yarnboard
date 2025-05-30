@@ -23,23 +23,16 @@ body {
 }
 
 #title-bar-container{
+    width: 100%;
     display: flex;
     flex-direction: row;
     background: black;
     height: 30px;
     background: var(--var-color-theme-darkest);
-}
-
-#title-bar {
-    width: 100dvw;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    user-select: none;
-    border: 2px solid var(--var-color-theme-dark);
-    box-sizing: border-box;
+    fill: var(--var-color-theme-dark);
+    stroke: var(--var-color-theme-dark);
     transition-duration: 150ms;
+    gap: 4px;
 }
 
 #title-bar:hover {
@@ -53,36 +46,25 @@ body {
     color: var(--var-color-theme-accent);
 }
 
-#app-icon {
-    max-width: 28px;
-    max-height: 28px;
-    user-select: none;
-    padding-left: .5dvw;
-    fill: var(--var-color-theme-darkless);
-    stroke: var(--var-color-theme-darkless);
-    transition-duration: 150ms;
-}
-
 #title-bar-label {
     font-family: var(--var-font-regular);
     color: var(--var-color-theme-darkless);
     font-size: 18px;
     flex-grow: 1;
     text-align: center;
-    line-height: 30px;
+    line-height: 26px;
     user-select: none;
     -webkit-user-select: none;
     transition-duration: 150ms;
     font-weight: 700;
-    position: absolute;
-    width: 100dvw;
+    border: 2px solid var(--var-color-theme-dark);
+    box-sizing: border-box;
+    height: 100%;
 }
 
-#title-bar-controls {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    background: var(--var-color-theme-darkest);
+#title-bar-label:hover {
+    border-color: var(--var-color-theme-accent);
+    color: var(--var-color-theme-accent);
 }
 
 .title-bar-button {
@@ -91,7 +73,6 @@ body {
     cursor: pointer;
     transition-duration: 150ms;
     z-index: 2;
-    margin-left: 4px;
     user-select: none;
     -webkit-user-select: none;
     display: flex;

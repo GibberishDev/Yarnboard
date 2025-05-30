@@ -15,3 +15,13 @@ document.querySelector("#button-maximize").addEventListener("click", () => {
 document.querySelector("#button-close").addEventListener("click", () => {
     app_window.close()
 })
+
+document.querySelector("#title-bar-icon-button").addEventListener("click", () => {
+    alert("Icon button")
+})
+document.querySelector("#title-bar-menu-button").addEventListener("click", () => {
+    alert("Menu button")
+})
+document.querySelector("#title-bar-settings-button").addEventListener("click", () => {
+    alert("Settings button")
+})
