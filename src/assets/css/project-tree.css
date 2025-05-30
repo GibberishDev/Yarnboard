@@ -3,10 +3,10 @@
 #project-tree-container {
     border: 2px solid var(--var-color-theme-dark);
     box-sizing: border-box;
-    flex-grow: 1;
     width: 400px;
+    max-width: 95dvw;
     height: 100%;
-    transition-property: border-radius, width, opacity;
+    transition-property: border-radius, opacity;
     transition-duration: 150ms;
     padding: 4px;
     background: var(--var-color-theme-darkest);
@@ -45,6 +45,7 @@
     color: var(--var-color-theme-accent);
 }
 
+
 #project-tree-resizer {
     background: var(--var-color-theme-darkest);
     min-width: 4px;
@@ -52,7 +53,9 @@
     cursor: e-resize;
     transition-duration: 150ms;
 }
-
 #project-tree-resizer:hover {
     background: var(--var-color-theme-accent);
+}
+#project-tree-container:is(.tree-hidden) ~#project-tree-resizer{
+    display: none;
 }

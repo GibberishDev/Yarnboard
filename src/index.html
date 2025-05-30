@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="./assets/css/project-tree.css">
 
   <script defer src="./js/titlebar.js"></script>
-  <!-- <script defer src="./js/view_control.js"></script> -->
-  <!-- <script defer src="./js/project_tree.js"></script> -->
+  <script defer src="./js/view_control.js"></script>
+  <script defer src="./js/project_tree.js"></script>
 </head>
   <body>
+    <div id="drag-image"></div>
     <div id="title-bar-container">
       <div data-tauri-drag-region id="title-bar">
         <svg
@@ -78,7 +79,6 @@
       </div>
       <div id="project-tree-resizer"></div>
       <div id="current-project">
-        <div id="project-background"></div>
       </div>
     </div id="main-body">
   </body>
