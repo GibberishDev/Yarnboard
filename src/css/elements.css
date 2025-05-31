@@ -1,0 +1,11 @@
+@import url(./variables.css);
+
+:root {
+    --outline-scale: 1.0;
+}
+
+.selected {
+    outline: calc(2px * var(--outline-scale)) solid var(--var-color-theme-accent-bright);
+    outline-offset: calc(2px * var(--outline-scale));
+    outline-style: dashed;
+}

@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <head>
   <title>Yarnboard</title>
-  <link rel="icon" href="./assets/ico/icon.ico">
-  
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="./assets/css/project-tree.css">
-  <link rel="stylesheet" href="./assets/css/project.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/project-tree.css">
+  <link rel="stylesheet" href="./css/project.css">
+  <link rel="stylesheet" href="./css/elements.css">
 
   <script defer src="./js/index.js"></script>
-
   <script defer src="./js/titlebar.js"></script>
+  <script defer src="./js/file_system.js"></script>
   <script defer src="./js/view_control.js"></script>
   <script defer src="./js/project_tree.js"></script>
 </head>
-  <body>
+  <body> 
     <div id="drag-image"></div>
     <div id="title-bar-container">
       <div id="title-bar-icon-button" class="title-bar-button">
@@ -99,6 +98,12 @@
 
       <div id="current-project">
         <div id="project-background"></div>
+
+        <div id="project-elements">
+          <div id="el1" class="element" style="rotate: 50deg; height: 500px; width: 500px;  position: absolute; left: -1000px; top: 0px; display: block; background: greenyellow; margin: 0; clear: right;"><div id="redel" style="position: relative; width: 100px; height: 100px; background: #ff000080; transform-origin: 0 0; scale: 5;"></div></div>
+          
+          <div id="el2" class="element" style="width: 100px; height: 100px; background: blue; position: absolute; left: 200px; top: 200px;"></div>
+        </div>
       </div>
 
 

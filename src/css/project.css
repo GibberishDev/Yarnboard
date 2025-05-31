@@ -8,6 +8,8 @@
     transition-duration: 150ms;
     padding: 4px;
     display: block;
+    overflow: hidden;
+    position: relative;
 }
 
 #current-project:hover {
@@ -15,7 +17,15 @@
 }
 
 #project-background {
-    /* background-image: url("../svg/pattern.svg"); */
+    background-image: url("../png/pattern.png"); /*For some reason setting this to svg pattern freezes tauri app*/
+    background-size: 100px 100px;
     width: 100%;
     height: 100%;
+    position: absolute;
+}
+
+#project-elements {
+    position: absolute;
+    top: calc(50% + 6px);
+    left: calc(50% + 6px);
 }
