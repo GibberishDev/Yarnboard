@@ -1,12 +1,27 @@
-// import * as path from "@tauri-apps/api/path"
-
-const { platform } = window.__TAURI__.os;
+const path = window.__TAURI__.path;
 const fs = window.__TAURI__.fs;
+const baseDirectory = window.__TAURI__.baseDirectory;
 
-function checkConfig() {
-    let plat = platform()
-    if (plat === "linux") { /* Main one :tf: */
+var configFilePath = ""
 
-    }
-
+async function checkConfig() {
+    let configPath = ""
+    await path.configDir().then(
+        async (promise) => {
+        configPath = promise + "/yarnboard"
+        await fs.exists(configPath).then( async (r) => {
+            if (!r) {
+                fs.mkdir(configPath).then(
+                    console.log("Config folder created") 
+                )
+            } else {
+                return 
+            }
+        }).then(
+            console.log("Checking app configuration file...")
+        )
+    })
 }
+
+
+checkConfig()

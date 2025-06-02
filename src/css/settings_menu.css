@@ -1,0 +1,66 @@
+@import url(variables.css);
+
+#settings-menu {
+    position: absolute;
+    width: calc(100dvw - 8px);
+    height: calc(100dvh - 42px);
+    margin: 0;
+    background-color: var(--var-color-theme-darkest);
+    z-index: 10;
+    display: flex;
+    gap: 4px;
+    flex-direction: row;
+}
+
+#settings-tabs {
+    width: 314px;
+    border: var(--var-color-theme-dark) 2px solid;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    box-sizing: border-box;
+    transition-duration: 150ms;
+}
+
+#settings-tabs:hover {
+    border-color: var(--var-color-theme-accent);
+}
+
+.settings-tab {
+    color: var(--var-color-theme-text-dark);
+    font-size: 24px;
+    transition-duration: 150ms;
+    text-shadow: 0 0 0px;
+    cursor: pointer;
+}
+
+.settings-tab:hover:not(.settings-selected-tab):not(.no){
+    text-shadow: 0 0 5px;
+    padding-left: 4px;
+}
+
+.settings-selected-tab {
+    cursor: unset;
+    color: var(--var-color-theme-accent-bright);
+    padding-left: 16px;
+    text-shadow: 0 0 5px var(--var-color-theme-accent-bright);
+    background-color: rgb(from var(--var-color-theme-accent-bright) r g b / 20%);
+
+}
+
+#settings-body {
+    border: var(--var-color-theme-dark) 2px solid;
+    display: flex;
+    flex-direction: column;
+    background: var(--var-color-theme-darkest);
+    padding: 4px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    transition-duration: 150ms;
+    color: var(--var-color-theme-text-dark);
+    font-size: 24px;
+}
+
+#settings-body:hover {
+    border-color: var(--var-color-theme-accent);
+}

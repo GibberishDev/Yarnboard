@@ -48,7 +48,7 @@ body {
 
 #title-bar-label {
     font-family: var(--var-font-regular);
-    color: var(--var-color-theme-darkless);
+    color: var(--var-color-theme-text-dark);
     font-size: 18px;
     flex-grow: 1;
     text-align: center;
@@ -64,7 +64,8 @@ body {
 
 #title-bar-label:hover {
     border-color: var(--var-color-theme-accent);
-    color: var(--var-color-theme-accent);
+    color: var(--var-color-theme-accent-bright);
+    text-shadow: 0 0 5px var(--var-color-theme-accent-bright);
 }
 
 .title-bar-button {
@@ -119,4 +120,9 @@ body {
 
 #main-body::-webkit-scrollbar {
     display: none;
+}
+
+.no {
+    cursor: not-allowed;
+    color: var(--var-color-theme-text-dark);
 }

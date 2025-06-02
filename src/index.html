@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<head>
-  <title>Yarnboard</title>
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/project-tree.css">
-  <link rel="stylesheet" href="./css/project.css">
-  <link rel="stylesheet" href="./css/elements.css">
+  <head>
+    <title>Yarnboard</title>
+    <link rel="stylesheet" href="./css/project_tree.css">
+    <link rel="stylesheet" href="./css/project.css">
+    <link rel="stylesheet" href="./css/elements.css">
+    <link rel="stylesheet" href="./css/settings_menu.css">
+    <link rel="stylesheet" href="./css/index.css">
 
-  <script defer src="./js/index.js"></script>
-  <script defer src="./js/titlebar.js"></script>
-  <script defer src="./js/file_system.js"></script>
-  <script defer src="./js/view_control.js"></script>
-  <script defer src="./js/project_tree.js"></script>
-</head>
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/titlebar.js"></script>
+    <!-- <script defer src="./js/file_system.js" type="module"></script> -->
+    <script defer src="./js/view_control.js"></script>
+    <script defer src="./js/project_tree.js"></script>
+    <script defer src="./js/project_manager.js"></script>
+    <script defer src="./js/selection.js"></script>
+
+  </head>
   <body> 
     <div id="drag-image"></div>
     <div id="title-bar-container">
@@ -86,6 +90,7 @@
       </div>
     </div>
     <div id="main-body">
+
       <div id="project-tree-container">
         <div id="project-tree-button-unfold">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 28" width="14px" height="28px" xmlns:bx="https://boxy-svg.com">
@@ -94,7 +99,6 @@
         </div>
       </div>
       <div id="project-tree-resizer"></div>
-
 
       <div id="current-project">
         <div id="project-background"></div>
@@ -106,8 +110,21 @@
         </div>
       </div>
 
-
+      <div id="settings-menu" style="display: none;">
+        <div id="settings-tabs">
+          <div class="settings-tab settings-selected-tab" id="settings-general">General</div>
+          <div class="settings-tab" id="settings-shortcuts">Shortcuts</div>
+          <div class="settings-tab" id="settings-language">Language</div>
+          <div class="settings-tab no" id="settings-custom-css" title="coming soon™">Custom CSS</div>
+        </div>
+        <div id="settings-body">
+            WIP! WIP! WIP! WIP! /ᐠ≽•ヮ•≼マ WIP! WIP! WIP! WIP!
+        </div>
+      </div>
     </div id="main-body">
+  <style id="custom-css">
+
+  </style>
   </body>
 </html>
 

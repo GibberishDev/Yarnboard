@@ -11,7 +11,7 @@
     padding: 4px;
     background: var(--var-color-theme-darkest);
     font-family: var(--var-font-regular);
-    color: var(--var-color-theme-darkless);
+    color: var(--var-color-theme-text-dark);
     opacity: 100%;
     z-index: 1;
 }
