@@ -33,6 +33,7 @@ class viewControl {
     this.viewportData.width = containerWidth
     this.viewportData.height = containerHeight
     this.updateElementsContainer()
+    this.updateViewScaleLabel()
   }
 
   static containerObserverConfig = { attributes: true, childList: false, subtree: false };
@@ -86,8 +87,13 @@ class viewControl {
     var X = (mouseOffset.x - this.currentViewData.pos.x) / this.currentViewData.scale
     var Y = (mouseOffset.y - this.currentViewData.pos.y) / -this.currentViewData.scale
     document.querySelector("#mouse-cords").innerHTML = ( 
-      String(parseInt(X)) + "x " + String(parseInt(Y)) + "y<br>" +
-      String(parseFloat(this.currentViewData.scale).toFixed(3)) + "x"
+      String(parseInt(X)) + "x " + String(parseInt(Y)) + "y<br>"
+    )
+  }
+
+  static updateViewScaleLabel = () => {
+    document.querySelector("#view-scale").innerHTML = ( 
+      String(parseInt(parseFloat(this.currentViewData.scale).toFixed(2) * 100)) + "%"
     )
   }
 

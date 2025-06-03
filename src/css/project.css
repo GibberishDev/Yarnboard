@@ -37,4 +37,14 @@
     right: 8px;
     color: rgb(from var(--var-color-theme-text) r g b / 60%);
     font-size: 10px;
+    z-index: 2;
+}
+
+#view-scale {
+    position: absolute;
+    bottom: 16px;
+    right: 8px;
+    color: rgb(from var(--var-color-theme-text) r g b / 60%);
+    font-size: 10px;
+    z-index: 2;
 }
