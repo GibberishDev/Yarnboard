@@ -22,10 +22,19 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    overflow: hidden;
 }
 
 #project-elements {
     position: absolute;
     top: calc(50% + 6px);
     left: calc(50% + 6px);
+}
+
+#mouse-cords {
+    position: absolute;
+    bottom: 6px;
+    right: 8px;
+    color: rgb(from var(--var-color-theme-text) r g b / 60%);
+    font-size: 10px;
 }

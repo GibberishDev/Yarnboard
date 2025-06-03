@@ -33,6 +33,7 @@ body {
     stroke: var(--var-color-theme-dark);
     transition-duration: 150ms;
     gap: 4px;
+    z-index: 1;
 }
 
 #title-bar:hover {
@@ -113,9 +114,10 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    overflow: scroll;
+    overflow: hidden;
     scrollbar-width: none;
     margin-top: 4px;
+    text-align: end;
 }
 
 #main-body::-webkit-scrollbar {

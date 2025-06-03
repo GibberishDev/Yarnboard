@@ -5,6 +5,11 @@ class viewControl {
   
   static drag = false
 
+  static viewportData = {
+    width: 0,
+    height: 0
+  }
+
   static currentViewData = {
     pos: {
       x: 0,
@@ -19,18 +24,19 @@ class viewControl {
     }
   }
 
-  static updateBackground = () => {
+  static updateViewport = () => {
     var containerWidth = this.container.getBoundingClientRect().width
     var containerHeight = this.container.getBoundingClientRect().height
     this.bg.style.backgroundPositionX = String(containerWidth / 2.0 + this.currentViewData.pos.x) + "px"
     this.bg.style.backgroundPositionY = String(containerHeight / 2.0 + this.currentViewData.pos.y) + "px"
     this.bg.style.backgroundSize = String(this.currentViewData.scale * 100) + "px"
+    this.viewportData.width = containerWidth
+    this.viewportData.height = containerHeight
     this.updateElementsContainer()
-
   }
 
   static containerObserverConfig = { attributes: true, childList: false, subtree: false };
-  static containerObserver = new ResizeObserver(this.updateBackground).observe(this.container, this.containerObserverConfig)
+  static containerObserver = new ResizeObserver(this.updateViewport).observe(this.container, this.containerObserverConfig)
 
   static containerListenerMouseDown = this.container.addEventListener("mousedown", (ev) => {
     if (ev.buttons === 4) {
@@ -50,7 +56,7 @@ class viewControl {
       this.drag = false
       this.currentViewData.pos.x = this.currentViewData.last.pos.x
       this.currentViewData.pos.y = this.currentViewData.last.pos.y
-      this.updateBackground()
+      this.updateViewport()
     }
   })
 
@@ -58,8 +64,9 @@ class viewControl {
     if (ev.buttons === 4 && this.drag) {
       this.currentViewData.pos.x += ev.movementX
       this.currentViewData.pos.y += ev.movementY
-      this.updateBackground()
+      this.updateViewport()
     }
+    viewControl.updateMouseLabel(ev)
   })
 
   static containerListenerMouseScroll = this.container.addEventListener("wheel", (ev) => {
@@ -71,9 +78,22 @@ class viewControl {
     }
   })
 
-  static zoom = (mouseX, mouseY, amount) => {
+  static updateMouseLabel = (event) => {
+    var mouseOffset = {
+      x: (event.clientX - (window.innerWidth - this.container.getBoundingClientRect().width) - (this.container.getBoundingClientRect().width / 2.0) - 6),
+      y: (event.clientY - (window.innerHeight - this.container.getBoundingClientRect().height) - (this.container.getBoundingClientRect().height / 2.0) - 6)
+    }
+    var X = (mouseOffset.x - this.currentViewData.pos.x) / this.currentViewData.scale
+    var Y = (mouseOffset.y - this.currentViewData.pos.y) / -this.currentViewData.scale
+    document.querySelector("#mouse-cords").innerHTML = ( 
+      String(parseInt(X)) + "x " + String(parseInt(Y)) + "y<br>" +
+      String(parseFloat(this.currentViewData.scale).toFixed(3)) + "x"
+    )
+  }
+
+  static zoom = (mouseX, mouseY, amount) => { 
     this.currentViewData.scale = this.currentViewData.scale * amount
-    document.querySelector(":root").style.setProperty("--outline-scale", 1 / this.currentViewData.scale)
+    document.querySelector(":root").style.setProperty("--outline-scale", 1 / this.currentViewData.scale) 
     var mouseOffset = {
       x: mouseX - (this.container.getBoundingClientRect().width / 2.0) - 6,
       y: mouseY - (this.container.getBoundingClientRect().height / 2.0) - 6,
@@ -84,14 +104,14 @@ class viewControl {
     }
     this.currentViewData.pos.x = viewOffset.x
     this.currentViewData.pos.y = viewOffset.y
-    this.updateBackground()
+    this.updateViewport()
   }
 
   static resetView = () => {
     this.currentViewData.pos.x = 0
     this.currentViewData.pos.y = 0
     this.currentViewData.scale = 1
-    this.updateBackground()
+    this.updateViewport()
   }
 
   static resetViewBind = document.addEventListener("keyup", (ev) => {
@@ -110,64 +130,7 @@ class viewControl {
   }
 }
 
-
-
 //TODO: Move to selection handling script
-
-document.querySelectorAll(".element").forEach((el) => {
-  el.addEventListener("click", (ev) => {
-    if (dragging) return;
-    if (ev.button === 0 && ev.shiftKey) {
-      el.classList.toggle("selected")
-      return
-    }
-    if (ev.button === 0) {
-      var elements = document.querySelectorAll(".element")
-      var selected = document.querySelectorAll(".selected")
-
-      if (!el.classList.contains("selected")) {
-        elements.forEach((els) => {
-          els.classList.remove("selected")
-        })
-        el.classList.add("selected")
-        return
-      }
-      if (selected.length > 1) {
-        elements.forEach((els) => {
-          els.classList.remove("selected")
-          el.classList.remove("selected")
-        })
-      } else {
-        if (selected.length === 0) {
-          el.classList.add("selected")
-        } else {
-          el.classList.remove("selected")
-        }
-      }
-    }
-  })
-})
-
-document.addEventListener("mouseup", (ev) => {
-  if (ev.button === 0) {
-    dragging = false
-    lockedX = false
-    lockedY = false
-  }
-  if (ev.button === 2 && dragging) {
-    dragging = false
-    resetDrag()
-  }
-})
-
-document.querySelector("#project-background").addEventListener("mouseup", (ev) => {
-  if (dragging) return;
-  if (ev.button === 0) {
-    document.querySelectorAll(".element").forEach((el) => {
-      el.classList.remove("selected")
-    })
-  }
-})
 
 document.addEventListener("keypress", (ev) => {
   if (ev.altKey && ev.code === "KeyG") {
@@ -211,9 +174,6 @@ document.addEventListener("keypress", (ev) => {
   }
 })
 
-function moveElements(ev) {
-}
-
 elementData = {}
 dragging = false
 lockedX = false
@@ -242,3 +202,5 @@ function resetDrag() {
   })
 
 }
+
+viewControl.updateViewport()

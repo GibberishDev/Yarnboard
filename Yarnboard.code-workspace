@@ -5,6 +5,9 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Yarnboard"
+		"liveServer.settings.multiRootWorkspaceName": "Yarnboard",
+		"search.exclude": {
+			"**/node_modules": false
+		}
 	}
 }

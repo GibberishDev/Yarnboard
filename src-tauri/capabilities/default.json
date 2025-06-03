@@ -27,6 +27,7 @@
     "fs:allow-app-write-recursive",
     "fs:allow-read",
     "fs:allow-app-read-recursive",
+    "core:window:allow-set-cursor-position",
     {
       "identifier": "fs:scope",
       "allow": ["**/**", "$CONFIG/**"]

@@ -3,6 +3,7 @@
 
 :root {
     --var-outline-width: 5px;
+    --var-selection-rect-inactive: all;
 
     --var-font-regular: "space grotesk";
     --var-font-handwritten: "Covered By Your Grace";
