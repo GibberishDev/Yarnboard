@@ -14,7 +14,6 @@ dist-ssr
 
 # Editor directories and files
 src-tauri/target
-node_modules
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -24,3 +23,6 @@ node_modules
 *.njsproj
 *.sln
 *.sw?
+
+notes
+tests

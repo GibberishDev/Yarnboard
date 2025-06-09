@@ -11,9 +11,9 @@
     --var-color-close: #e81123;
     
     --var-color-theme-darkest: #0d0d0d;
-    --var-color-theme-dark: hsl(0, 0%, 20%);
-    --var-color-theme-text-dark: hsl(0, 0%, 35%);
-    --var-color-theme-text: hsl(0, 0%, 65%);
+    --var-color-theme-dark: #333333;
+    --var-color-theme-text-dark: #595959;
+    --var-color-theme-text: #a6a6a6;
     --var-color-theme-accent: #1d6600;
     --var-color-theme-accent-bright: #33b300;
 }

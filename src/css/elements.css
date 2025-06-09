@@ -8,7 +8,7 @@
     pointer-events: var(--var-selection-rect-inactive) !important;
 }
 
-.selected {
+.selected:not(.pin-element) {
     outline: calc(2px * var(--outline-scale)) solid var(--var-color-theme-accent-bright);
     outline-offset: calc(2px * var(--outline-scale));
     outline-style: dashed;
@@ -23,4 +23,31 @@
     height: 10px;
     pointer-events: none;
     z-index: 1;
+}
+
+
+.pin-element {
+    position: absolute;
+    aspect-ratio: 1 / 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--var-color-theme-accent);
+    transform-origin: 50% 100%;
+    translate: -50% -100%;
+}
+
+@keyframes speen {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
+    
+}
+
+.pin-element.selected {
+    stroke: var(--var-color-theme-accent-bright);
+
+}
+.pin-element svg {
+    flex-grow: 1;
+    height: 100%;
 }
