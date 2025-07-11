@@ -32,6 +32,8 @@
     transition-duration: 150ms;
     text-shadow: 0 0 0px;
     cursor: pointer;
+    width: calc(100% - 16px);
+    text-align: start;
 }
 
 .settings-tab:hover:not(.settings-selected-tab):not(.no){
@@ -59,6 +61,7 @@
     transition-duration: 150ms;
     color: var(--var-color-theme-text-dark);
     font-size: 24px;
+    align-items: start;
 }
 
 #settings-body:hover {

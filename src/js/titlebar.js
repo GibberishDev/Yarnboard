@@ -1,4 +1,4 @@
-const app_window = window.__TAURI__.window.getCurrentWindow()
+// const app_window = window.__TAURI__.window.getCurrentWindow() // Initiated in ./index.js
 
 function changeTitle(name = "Yarnboard") {
     document.querySelector("#title-bar-label").textContent = name
@@ -24,5 +24,6 @@ document.querySelector("#title-bar-menu-button").addEventListener("click", () =>
     alert("Menu button")
 })
 document.querySelector("#title-bar-settings-button").addEventListener("click", () => {
-    alert("Settings button")
+    var style = document.getElementById("settings-menu").style
+    style.display === "flex" ? style.display = "none" : style.display = "flex"
 })

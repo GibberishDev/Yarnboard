@@ -30,7 +30,10 @@
     "core:window:allow-set-cursor-position",
     {
       "identifier": "fs:scope",
-      "allow": ["**/**", "$CONFIG/**"]
+      "allow": [
+        "**/**",
+        "$CONFIG/**"
+      ]
     }
   ]
 }
